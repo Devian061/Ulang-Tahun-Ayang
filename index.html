@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Ucapan Ulang Tahun</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #385dd6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            overflow: auto;
+        }
+
+        .card {
+            background-color: #ffffffb7;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #ff6f61;
+            font-size: 3rem;
+            animation: rainbow 2s infinite;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff6f61; }
+            25% { color: #ffb961; }
+            50% { color: #61ff9b; }
+            75% { color: #61aaff; }
+            100% { color: #ff6f61; }
+        }
+
+        .balloons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .balloons img,
+        .video-container video {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0; /* Jarak atas dan bawah video */
+            overflow: hidden; /* Memastikan tidak ada overflow */
+        }
+
+        .signature {
+            font-size: 1.2rem;
+            color: #888;
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6f61;
+            opacity: 0.9;
+            animation: fall 5s linear infinite;
+        }
+
+        .confetti-piece:nth-child(even) {
+            background-color: #61aaff;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Gaya untuk halaman Happy Birthday */
+        .birthday-page {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0843e6; /* Warna latar belakang */
+        }
+
+        .flowers {
+            width: 250px;
+            animation: fadeIn 2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .happy-birthday {
+            font-size: 4rem;
+            color: #ff6f61;
+            margin-top: 20px;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .button {
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e55e56;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Happy Birthday!</h1>
+        <p> Selamat Ulang Tahun Sayangkuu, Cie ulang tahun wkwk, semoga sehat slalu ayang,di lancarkan rejekinya, di lancarkan segala urusannya, apa lagi mau menghadapi skripsi semoga lancar sayang semangat, dan yang penting tetap sama aku terus yahh hehe. Lopyu Sayangku, Cintaku, Duniaku ❤</p>
+        
+        <!-- Menambahkan Video -->
+        <div class="balloons">
+            <img src="foto1.jpeg" alt="Balon 1">
+            <img src="foto2.jpeg" alt="Balon 2">
+            <img src="foto3.jpeg" alt="Balon 3">
+        </div>
+        
+        <p class="signature"> Sedikit Foto Sebagai Kenangan hehe <br> </p>
+        <div class="balloons">
+            <img src="foto4.jpeg" alt="Balon 1">
+            <img src="foto5.jpeg" alt="Balon 2">
+            <img src="foto6.jpeg" alt="Balon 3">
+        </div>
+        <br></br>
+        <div class="balloons">
+            <img src="foto7.jpeg" alt="Balon 1">
+            <img src="foto8.jpeg" alt="Balon 2">
+            <img src="foto9.jpeg" alt="Balon 3">
+        </div>
+        <p class="signature"> Terimakasih banyak sekali lagi, karena sudah menerima cowok dengan banyak kurangnya ini, thanks for everything sayang🙏🥰 <br> </p>
+        <div class="video-container">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4"> <!-- Ganti dengan nama file video Anda -->
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4"> <!-- Ganti dengan nama file video Anda -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p class="signature"> Selamat Ulang Tahun Sayangku🙏🥰 <br> [Salam Hangat Devian] </p>
+        
+        <!-- Tombol untuk mengarahkan ke halaman Happy Birthday -->
+        <button class="button" id="birthdayButton">Silahkan di klik Kanjeng Ratu</button>
+    </div>
+
+    <div class="confetti">
+        <div class="confetti-piece" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="confetti-piece" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="confetti-piece" style="left: 30%; animation-delay: 0.5s;"></div>
+        <div class="confetti-piece" style="left: 40%; animation-delay: 1.5s;"></div>
+        <div class="confetti-piece" style="left: 50%; animation-delay: 2s;"></div>
+        <div class="confetti-piece" style="left: 60%; animation-delay: 1s;"></div>
+        <div class="confetti-piece" style="left: 70%; animation-delay: 2.5s;"></div>
+        <div class="confetti-piece" style="left: 80%; animation-delay: 1s;"></div>
+        <div class="confetti-piece" style="left: 90%; animation-delay: 3s;"></div>
+    </div>
+
+    <div class="birthday-page" id="birthdayPage">
+        <img src="foto10.jpeg" class="flowers" alt="Bunga"> <!-- Ganti dengan gambar bunga Anda -->
+        <h1 class="happy-birthday">Happy Birthday Sayang🥰!</h1>
+    </div>
+
+    <script>
+        document.getElementById('birthdayButton').onclick = function() {
+            document.querySelector('.card').style.display = 'none'; // Menyembunyikan kartu ucapan
+            const birthdayPage = document.getElementById('birthdayPage');
+            birthdayPage.style.display = 'flex'; // Menampilkan halaman Happy Birthday
+        };
+    </script>
+
+</body>
+</html>
